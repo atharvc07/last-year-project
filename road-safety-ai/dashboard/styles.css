@@ -1,0 +1,90 @@
+/* dashboard/styles.css */
+
+body {
+    background-color: #f7f9fc !important;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #333;
+}
+
+header {
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.card-header {
+    background-color: transparent !important;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+/* Prediction Module Styling */
+.prediction-card {
+    border: 1px solid #e1e5eb;
+    background-color: #fafbfc;
+}
+
+.prediction-card .card-header {
+    background-color: #0d6efd !important;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Metric card specific borders */
+.border-left-primary {
+    border-left: 4px solid #0d6efd;
+}
+
+.border-left-danger {
+    border-left: 4px solid #dc3545;
+}
+
+.border-left-warning {
+    border-left: 4px solid #ffc107;
+}
+
+.border-left-info {
+    border-left: 4px solid #0dcaf0;
+}
+
+.form-label {
+    margin-bottom: 0.2rem;
+    color: #495057;
+}
+
+.form-control, .form-select {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* Utility for dynamic result colors */
+.bg-danger-subtle {
+    background-color: #f8d7da !important;
+    color: #842029;
+    border-color: #f5c2c7;
+}
+
+.bg-warning-subtle {
+    background-color: #fff3cd !important;
+    color: #664d03;
+    border-color: #ffecb5;
+}
+
+.bg-success-subtle {
+    background-color: #d1e7dd !important;
+    color: #0f5132;
+    border-color: #badbcc;
+}
