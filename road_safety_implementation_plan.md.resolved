@@ -1,0 +1,85 @@
+# AI-Powered Road Safety Analytics and Accident Risk Prediction System
+## Implementation Plan
+
+Welcome to your Final Year Project! This is a comprehensive, data-driven system integrating Machine Learning, Computer Vision, Backend API development, and Frontend Data Visualization. 
+
+This project is perfectly sized for a 2-3 month timeline and will look highly impressive to your evaluators.
+
+### 📁 Project Folder Structure
+We will build the following structure:
+```text
+road-safety-ai/
+│
+├── data/                  # Raw and processed datasets
+│   └── accidents.csv
+│
+├── notebooks/             # Jupyter Notebooks for analysis
+│   ├── EDA.ipynb
+│   └── model_training.ipynb
+│
+├── models/                # Saved trained ML models
+│   ├── risk_model.pkl
+│   └── kmeans_model.pkl
+│
+├── backend/               # Flask API
+│   ├── app.py
+│   └── predict.py
+│
+├── vision/                # OpenCV & YOLOv8 scripts
+│   └── yolo_detection.py
+│
+├── dashboard/             # Frontend application
+│   ├── index.html
+│   ├── styles.css
+│   └── dashboard.js
+│
+└── requirements.txt       # Python dependencies
+```
+
+### 🛣️ Roadmap: Step-by-Step Implementation
+
+#### **Phase 1: Environment Setup & Dependencies**
+1. Create the project directory structure.
+2. Initialize virtual environment.
+3. Install necessary Python libraries (Pandas, Scikit-learn, XGBoost, Flask, OpenCV, Ultralytics YOLOv8).
+
+#### **Phase 2: Data Acquisition & Exploratory Data Analysis (EDA)**
+1. Obtain an open-source road safety dataset (e.g., from Kaggle). Let's use UK Accident Dataset or synthesize a realistic one for the MVP.
+2. Clean data (missing values, normalization).
+3. Perform Feature Engineering (extracting hour, day, weather severity, traffic density).
+
+#### **Phase 3: Machine Learning Module**
+1. **Accident Severity & Risk Prediction:**
+   - Train Random Forest and XGBoost models.
+   - Output risk scores mapping to Low (0-30), Medium (31-70), and High (71-100).
+2. **Accident Hotspot Detection:**
+   - Train KMeans / DBSCAN on latitude and longitude data to identify geographic clusters of accidents.
+3. Save trained models as `.pkl` files.
+
+#### **Phase 4: Computer Vision Module (Traffic Analysis)**
+1. Use a pre-trained `YOLOv8` model.
+2. Write a script `yolo_detection.py` to process traffic videos.
+3. Object detection (car, bus, truck, motorcycle).
+4. Estimate traffic density from vehicle counts.
+
+#### **Phase 5: Backend API Engine (Flask)**
+1. Create `predict.py` to load ML pipelines.
+2. Build `app.py` with Flask to expose endpoints:
+   - `/api/predict_risk` (for ML Risk Score)
+   - `/api/hotspots` (for map clusters)
+   - `/api/stats` (for dashboard metrics)
+
+#### **Phase 6: Interactive Dashboard (Frontend)**
+1. Build `index.html` with Bootstrap for structural layout.
+2. Apply modern styling (`styles.css`).
+3. Integrate `Chart.js` for graphs and `Leaflet.js` for interactive Maps.
+4. Fetch data from Flask via `dashboard.js`.
+
+#### **Phase 7: Final System Integration & Deployment Prep**
+1. Link YOLO CV scripts (simulating real-time inputs or video uploads).
+2. End-to-end testing of the system.
+3. Write comments, cleanup code, and prepare for presentation!
+
+---
+> [!TIP]
+> We will tackle this one phase at a time to ensure you fully understand the mechanics behind every line of code!
